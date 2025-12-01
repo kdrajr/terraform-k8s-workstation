@@ -65,7 +65,7 @@ resource "aws_iam_role_policy_attachment" "k8s_workstation_attach" {
 }
 
 
-
+/* 
 # Attach managed policies
 resource "aws_iam_role_policy_attachment" "eks_cluster_policy" {
   role       = aws_iam_role.k8s_workstation_role.name
@@ -113,3 +113,4 @@ resource "aws_iam_role_policy_attachment" "ssm_read_only" {
   role       = aws_iam_role.k8s_workstation_role.name
   policy_arn = "arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess"
 }
+ */

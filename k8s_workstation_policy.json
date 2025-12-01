@@ -1,67 +1,84 @@
 {
   "Version": "2012-10-17",
   "Statement": [
-
+    {
+      "Effect": "Allow",
+      "Action": "cloudformation:*",
+      "Resource": "*"
+    },
     {
       "Effect": "Allow",
       "Action": [
-        "cloudformation:*"
+        "ec2:*Tag*",
+        "ec2:Create*",
+        "ec2:Delete*",
+        "ec2:Describe*",
+        "ec2:Modify*",
+        "ec2:Associate*",
+        "ec2:Disassociate*",
+        "ec2:Attach*",
+        "ec2:Detach*",
+        "ec2:AllocateAddress",
+        "ec2:ReleaseAddress",
+        "ec2:AuthorizeSecurityGroupIngress",
+        "ec2:RevokeSecurityGroupIngress",
+        "ec2:RunInstances"
       ],
       "Resource": "*"
     },
-
     {
       "Effect": "Allow",
       "Action": [
-        "eks:*"
+        "autoscaling:Describe*",
+        "autoscaling:CreateAutoScalingGroup",
+        "autoscaling:UpdateAutoScalingGroup",
+        "autoscaling:DeleteAutoScalingGroup",
+        "autoscaling:CreateLaunchConfiguration",
+        "autoscaling:DeleteLaunchConfiguration",
+        "autoscaling:PutScalingPolicy",
+        "autoscaling:DeletePolicy"
       ],
       "Resource": "*"
     },
-
+    {
+      "Effect": "Allow",
+      "Action": "eks:*",
+      "Resource": "*"
+    },
     {
       "Effect": "Allow",
       "Action": [
-        "ec2:*"
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:UpdateRole",
+        "iam:GetRole",
+        "iam:ListRoles",
+        "iam:PassRole",
+        "iam:TagRole",
+        "iam:UntagRole",
+        "iam:CreatePolicy",
+        "iam:DeletePolicy",
+        "iam:TagPolicy",
+        "iam:UntagPolicy",
+        "iam:AttachRolePolicy",
+        "iam:ListAttachedRolePolicies",
+        "iam:DetachRolePolicy",
+        "iam:CreateInstanceProfile",
+        "iam:TagInstanceProfile",
+        "iam:UntagInstanceProfile",
+        "iam:AddRoleToInstanceProfile",
+        "iam:RemoveRoleFromInstanceProfile",
+        "iam:DeleteInstanceProfile"
       ],
       "Resource": "*"
     },
-
     {
       "Effect": "Allow",
       "Action": [
-        "iam:*"
-      ],
-      "Resource": "*"
-    },
-
-    {
-      "Effect": "Allow",
-      "Action": [
-        "autoscaling:*"
-      ],
-      "Resource": "*"
-    },
-
-    {
-      "Effect": "Allow",
-      "Action": [
-        "elasticloadbalancing:*"
-      ],
-      "Resource": "*"
-    },
-
-    {
-      "Effect": "Allow",
-      "Action": [
-        "logs:*"
-      ],
-      "Resource": "*"
-    },
-
-    {
-      "Effect": "Allow",
-      "Action": [
-        "sts:AssumeRole"
+        "ssm:GetParameter",
+        "ssm:GetParameters",
+        "ssm:GetParametersByPath",
+        "ssm:DescribeParameters"
       ],
       "Resource": "*"
     }

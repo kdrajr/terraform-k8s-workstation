@@ -75,6 +75,13 @@
     {
       "Effect": "Allow",
       "Action": [
+        "elasticloadbalancing:DescribeLoadBalancers"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
         "ssm:GetParameter",
         "ssm:GetParameters",
         "ssm:GetParametersByPath",
